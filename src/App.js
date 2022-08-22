@@ -82,7 +82,7 @@ function App() {
                   </main>
                   }
          />
-      <Routes>
+      </Routes>
       </HashRouter>
     </div>
   );
