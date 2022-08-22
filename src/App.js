@@ -9,7 +9,7 @@ const Logout = () => {
   const navigate = useNavigate()
   return (
     <button onClick={() => navigate('/login')} >
-      Logout
+      登出
     </button>
   )
 }
