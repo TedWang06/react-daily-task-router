@@ -2,6 +2,9 @@ import './App.css';
 import {
   HashRouter,
   NavLink,
+  Routes, Route, useParams,
+  useNavigate,
+  Outlet
 } from 'react-router-dom';
 
 
