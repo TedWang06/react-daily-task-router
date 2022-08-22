@@ -28,6 +28,19 @@ const Register = () => {
   return <p>這是註冊頁面</p>;
 };
 
+const Post = () => {
+  return <div>
+          <p>這是Post頁面</p>
+          <Outlet />
+         </div>;
+};
+
+const PostId = () => {
+  let params = useParams();
+  return <p>Post ID: {params.postId}</p>;
+};
+
+
 function App() {
   return (
     <div className="container">
@@ -45,6 +58,9 @@ function App() {
           <NavLink to="/todo">
             <p>Todo 頁面</p>
           </NavLink>
+          <NavLink to="/post">
+            <p>Post 頁面</p>
+          </NavLink>
         </div>
         {/* Routes, Route 練習區 */}
         {/* 練習區 */}
@@ -52,6 +68,9 @@ function App() {
         <Route path="/register" element={<Register />} /> 
         <Route path="/login" element={<Login />} /> 
         <Route path="/todo" element={<Todo />} /> 
+        <Route path="/post" element={<Post />} > 
+             <Route path=":postId" element={<PostId />} />
+        </Route>
         <Route
           path="*"
           element={
