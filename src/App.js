@@ -2,7 +2,9 @@ import './App.css';
 import {
   HashRouter,
   NavLink,
-  Routes, Route, useParams,
+  Routes,
+  Route,
+  useParams,
   useNavigate,
   Outlet
 } from 'react-router-dom';
@@ -43,7 +45,6 @@ const PostId = () => {
   return <p>Post ID: {params.postId}</p>;
 };
 
-
 function App() {
   return (
     <div className="container">
@@ -63,6 +64,9 @@ function App() {
           </NavLink>
           <NavLink to="/post">
             <p>Post 頁面</p>
+          </NavLink>
+          <NavLink to="/post/513">
+            <p>Post 詳細頁面</p>
           </NavLink>
         </div>
         {/* Routes, Route 練習區 */}
